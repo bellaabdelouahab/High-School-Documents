@@ -1,0 +1,18 @@
+doctype html
+head
+  style
+       include ../../public/style.css
+form#formi(action='/login' method='POST')
+  h2 Welcome Blog Site
+  p Log in
+  .container
+    if notification
+      p#notification #{notification}
+    label(for='username')
+      b username
+    input#username.form-control(type='username' name="username" placeholder='Enter your username' required='' pattern='/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/')
+    label(for='name')
+      b
+        | Password
+        input#password.form-control(type='password' name="password" placeholder='Enter your password' minlength='8' required='')
+        button#mybutton(type='submit') Login

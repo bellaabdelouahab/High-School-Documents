@@ -1,0 +1,8 @@
+extends index.pug
+
+block content
+  div(style='margin-top:20vh ;')
+  form.form(action='/creatpost' method='post')
+    input(type='text' name='Title' placeholder='Title')
+    input(type='text' name='Content' placeholder='Content')
+    input(type='submit' value='Add Post')
